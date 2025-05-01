@@ -1,72 +1,108 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная - Английский с Марией</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Главная - Английский с Марией Валерьевной</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- AOS animation -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">Главное</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Меню</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">О себе</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="achievements.html">Достижения</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="materials.html">Материалы</a>
-                </li>
-            </ul>
-        </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">English with Maria</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Главная</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">О себе</a></li>
+        <li class="nav-item"><a class="nav-link" href="achievements.html">Достижения</a></li>
+        <li class="nav-item"><a class="nav-link" href="materials.html">Материалы</a></li>
+      </ul>
     </div>
+  </div>
 </nav>
 
-<main class="container mt-4">
-    <h1>Главная страница</h1>
-        <h2>Добро пожаловать на сайт-визитку Марии Валерьевны — вашего проводника в мир английского языка!
-            Этот сайт создан с любовью и гордостью для моей мамы — учителя английского языка с 20-летним стажем работы в школе. 
-            Здесь вы найдете всё, чтобы помочь вашему ребенку полюбить английский, улучшить оценки и 
-            подготовиться к важным экзаменам.</h2>
+<main class="container mt-5">
 
-    <h3>Для чего создан этот сайт?</h3>
+  <!-- Герой-секция -->
+  <section class="hero text-center mb-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h1 class="display-5 mb-3" data-aos="fade-down">Английский с Марией Валерьевной</h1>
+        <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">
+          20 лет опыта в школе, сотни счастливых учеников и доказанные методы подготовки к ОГЭ/ЕГЭ.
+        </p>
+        <a href="about.html" class="btn btn-primary btn-lg" data-aos="zoom-in" data-aos-delay="200">Узнать больше</a>
+      </div>
+    </div>
+  </section>
 
-        <h2>1. Помочь родителям узнать обо мне и моих методах преподавания.</h2>
+  <!-- Блок Услуг в виде карточек -->
+  <section class="mb-5">
+    <h2 class="h4 mb-4 text-center" data-aos="fade-up">Что получит ваш ребёнок</h2>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="flip-left" data-aos-delay="100">
+        <div class="card h-100 text-center shadow-sm">
+          <div class="card-body">
+            <i class="bi bi-journal-text fs-1 text-primary"></i>
+            <h5 class="card-title mt-3">Подготовка к ОГЭ/ЕГЭ</h5>
+            <p class="card-text">Разбор «ловушек» в заданиях и пробные тесты в формате экзамена.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
+        <div class="card h-100 text-center shadow-sm">
+          <div class="card-body">
+            <i class="bi bi-people fs-1 text-primary"></i>
+            <h5 class="card-title mt-3">Английский через театр</h5>
+            <p class="card-text">Ставим спектакли на английском и улучшаем произношение без акцента.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="flip-left" data-aos-delay="300">
+        <div class="card h-100 text-center shadow-sm">
+          <div class="card-body">
+            <i class="bi bi-pencil fs-1 text-primary"></i>
+            <h5 class="card-title mt-3">Помощь с домашкой</h5>
+            <p class="card-text">Простое объяснение сложных тем и помощь в написании сочинений.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <h2>2. Дать ученикам бесплатные материалы для самостоятельной работы.</h2>
-            
-        <h2>3. Объединить всех, кому важен успех детей в изучении языка!</h2>
+  <!-- Контактный блок -->
+  <section class="text-center mt-5" data-aos="fade-up">
+    <h2 class="h4 mb-2">Есть вопросы?</h2>
+    <p>Напишите мне — и я обязательно отвечу вам!</p>
+    <a href="contacts.html" class="btn btn-outline-primary">Связаться со мной</a>
+  </section>
 
-    <h3>Ваш ребенок получит:</h3>
-        <h2>🔍 Подготовку к ОГЭ/ЕГЭ</h2>
-            <h4> - Разбор всех заданий с "ловушками"</h4>
-            <h4> - Пробные тесты в формате экзамена</h4>
-        <h2>🎭 Английский через театр</h2>
-            <h4> - Ставим спектакли на английском</h4>
-            <h4> - Учимся говорить без акцента</h4>
-        <h2>📚 Помощь с домашними заданиями</h2>
-            <h4> - Объясню сложные темы просто</h4>
-            <h4> - Научу писать сочинения без ошибок</h4>
-        
-
-
-
-    
 </main>
+
+<footer class="mt-5 py-4 bg-light text-center">
+  <div class="container">
+    <p class="mb-1">&copy; 2025 Английский с Марией Валерьевной</p>
+    <small>Телефон: +7 (914) 827-95-53 &middot; Email: grigmaryiavaleri@mail.ru</small>
+  </div>
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true, // анимация только один раз
+    duration: 800, // продолжительность в мс
+    easing: 'ease-in-out'
+  });
+</script>
 </body>
 </html>

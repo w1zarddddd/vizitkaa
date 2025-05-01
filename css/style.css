@@ -1,3 +1,4 @@
+/* index.html */
 .container {
     width: 90%; /* 90% ширины родительского элемента */
     max-width: 1400px; /* Но не больше 1400px */
@@ -73,3 +74,103 @@ h4 {
     font-weight: 350;
     font-size: 20px;
     }
+ /* Лёгкие стили прямо в странице для быстрого прототипа */
+ .hero {
+    background: #f8f9fa;
+    padding: 4rem 1rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  .service-icon {
+    font-size: 2rem;
+    color: #0d6efd;
+  }
+  footer {
+    background: #f1f1f1;
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .contact-btn {
+    margin-top: 1rem;
+  }
+/* index.html */
+
+
+    /* about.html */
+    .profile-img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 4px solid #0d6efd;
+      }
+      
+      .timeline {
+        position: relative;
+        padding-left: 2rem;
+        margin-top: 2rem;
+      }
+      
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 1rem;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: #0d6efd;
+        border-radius: 2px;
+      }
+      
+      .timeline-item {
+        position: relative;
+        margin-bottom: 2rem;
+      }
+      
+      .timeline-item h5 {
+        padding-left: 2rem;
+        position: relative;
+        z-index: 1;
+      }
+      
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.4rem;
+        width: 1rem;
+        height: 1rem;
+        background: #fff;
+        border: 4px solid #0d6efd;
+        border-radius: 50%;
+        z-index: 2;
+      }
+     /* about.html */     
+
+     /* achievements */
+     .achievement-icon {
+        font-size: 3rem;
+        color: #0d6efd;
+      }
+      .divider {
+        width: 60px;
+        height: 4px;
+        background: #0d6efd;
+        margin: 1rem auto 2rem;
+        border-radius: 2px;
+      }
+     /* achievements */
+
+     /* materials */
+     .divider {
+        width: 60px; height: 4px;
+        background: #0d6efd;
+        margin: 0.5rem auto 1.5rem;
+        border-radius: 2px;
+      }
+      .material-icon {
+        font-size: 2.5rem; color: #0d6efd;
+      }
+     /* materials */
