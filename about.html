@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>О себе - Английский с Марией Валерьевной</title>
+  <title data-i18n="about_title">О себе - Английский с Марией Валерьевной</title>
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -13,23 +13,29 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/style.css" />
-
 </head>
 
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">English with Maria</a>
+    <a class="navbar-brand fw-bold" href="index.html" data-i18n="brand">English with Maria</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-        <li class="nav-item"><a class="nav-link active" href="#">О себе</a></li>
-        <li class="nav-item"><a class="nav-link" href="achievements.html">Достижения</a></li>
-        <li class="nav-item"><a class="nav-link" href="materials.html">Материалы</a></li>
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav_home">Главная</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#" data-i18n="nav_about">О себе</a></li>
+        <li class="nav-item"><a class="nav-link" href="achievements.html" data-i18n="nav_achievements">Достижения</a></li>
+        <li class="nav-item"><a class="nav-link" href="materials.html" data-i18n="nav_materials">Материалы</a></li>
+        <!-- Language switcher -->
+        <li class="nav-item ms-3">
+          <select id="lang-switcher" class="form-select form-select-sm">
+            <option value="ru">Русский</option>
+            <option value="en">English</option>
+          </select>
+        </li>
       </ul>
     </div>
   </div>
@@ -40,60 +46,58 @@
   <section class="d-flex flex-column flex-md-row align-items-center mb-5" data-aos="fade-up">
     <img src="images/maria.jpg" alt="Фото Марии Валерьевны" class="profile-img me-md-4 mb-3 mb-md-0" />
     <div>
-      <h1 class="h2 mb-3">Григорьева Мария Валерьевна</h1>
-      <p class="lead">
-        Учитель английского языка с 20-летним стажем, выпускница ЯГУ, автор методик
-        «Английский без стресса».
+      <h1 class="h2 mb-3" data-i18n="bio_name">Григорьева Мария Валерьевна</h1>
+      <p class="lead" data-i18n="bio_lead">
+        Учитель английского языка с 20-летним стажем, выпускница ЯГУ, автор методик «Английский без стресса».
       </p>
-      <p>
-        Моя миссия — сделать изучение языка увлекательным и понятным каждому. Я
-        уверена, что лучший способ учиться — через практику и живое общение.
+      <p data-i18n="bio_mission">
+        Моя миссия — сделать изучение языка увлекательным и понятным каждому. Я уверена, что лучший способ учиться — через практику и живое общение.
       </p>
     </div>
   </section>
 
   <!-- Карточки навыков -->
   <section class="mb-5" data-aos="fade-up" data-aos-delay="100">
-    <h2 class="h4 text-center mb-4">Ключевые навыки</h2>
+    <h2 class="h4 text-center mb-4" data-i18n="skills_title">Ключевые навыки</h2>
     <div class="row text-center">
       <div class="col-6 col-md-3 mb-3" data-aos="zoom-in" data-aos-delay="200">
         <i class="bi bi-translate fs-1 text-primary"></i>
-        <p class="mt-2">Грамматика</p>
+        <p class="mt-2" data-i18n="skill_grammar">Грамматика</p>
       </div>
       <div class="col-6 col-md-3 mb-3" data-aos="zoom-in" data-aos-delay="300">
         <i class="bi bi-ear fs-1 text-primary"></i>
-        <p class="mt-2">Аудирование</p>
+        <p class="mt-2" data-i18n="skill_listening">Аудирование</p>
       </div>
       <div class="col-6 col-md-3 mb-3" data-aos="zoom-in" data-aos-delay="400">
         <i class="bi bi-chat-dots fs-1 text-primary"></i>
-        <p class="mt-2">Разговорная речь</p>
+        <p class="mt-2" data-i18n="skill_speaking">Разговорная речь</p>
       </div>
       <div class="col-6 col-md-3 mb-3" data-aos="zoom-in" data-aos-delay="500">
         <i class="bi bi-pencil-square fs-1 text-primary"></i>
-        <p class="mt-2">Письменная речь</p>
+        <p class="mt-2" data-i18n="skill_writing">Письменная речь</p>
       </div>
     </div>
   </section>
 
   <!-- Линейка опыта -->
   <section data-aos="fade-up" data-aos-delay="100">
-    <h2 class="h4 text-center mb-4">Мой путь</h2>
+    <h2 class="h4 text-center mb-4" data-i18n="timeline_title">Мой путь</h2>
     <div class="timeline">
       <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
-        <h5>1998–2002: Студент ЯГУ</h5>
-        <p>Факультет английской филологии, диплом с отличием.</p>
+        <h5 data-i18n="timeline_item1_title">1998–2002: Студент ЯГУ</h5>
+        <p data-i18n="timeline_item1_desc">Факультет английской филологии, диплом с отличием.</p>
       </div>
       <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
-        <h5>2003–2012: Преподаватель в школе МБСОУ Мальжагарская СОШ, с. Улахан-Ан</h5>
-        <p>Внедрение интерактивных методик.</p>
+        <h5 data-i18n="timeline_item2_title">2003–2012: Преподаватель в школе МБСОУ Мальжагарская СОШ, с. Улахан-Ан</h5>
+        <p data-i18n="timeline_item2_desc">Внедрение интерактивных методик.</p>
       </div>
       <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
-        <h5>2012–2020: Студент Магистратуры по направлению Факультет английской филологии в СВФУ </h5>
-        <p>Красный диплом об окончании.</p>
+        <h5 data-i18n="timeline_item3_title">2012–2020: Магистратура СВФУ</h5>
+        <p data-i18n="timeline_item3_desc">Красный диплом об окончании.</p>
       </div>
       <div class="timeline-item" data-aos="fade-right" data-aos-delay="400">
-        <h5>2020–настоящее время: Учитель в шокле №29</h5>
-        <p>Индивидуальные и групповые занятия, онлайн-школа «English with Maria».</p>
+        <h5 data-i18n="timeline_item4_title">2020–настоящее время: Учитель в школе №29</h5>
+        <p data-i18n="timeline_item4_desc">Индивидуальные и групповые занятия, онлайн-школа «English with Maria».</p>
       </div>
     </div>
   </section>
@@ -105,8 +109,10 @@
 <!-- AOS JS -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
-  AOS.init();
+  AOS.init({ once: true, duration: 800, easing: 'ease-in-out' });
 </script>
 
+<!-- Подключаем i18n-скрипт -->
+<script src="js/language_selector.js"></script>
 </body>
 </html>

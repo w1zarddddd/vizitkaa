@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Главная - Английский с Марией Валерьевной</title>
+  <title data-i18n="title">Главная - Английский с Марией Валерьевной</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <!-- AOS animation -->
@@ -14,16 +14,23 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">English with Maria</a>
+    <a class="navbar-brand fw-bold" href="index.html" data-i18n="brand">English with Maria</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="#">Главная</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">О себе</a></li>
-        <li class="nav-item"><a class="nav-link" href="achievements.html">Достижения</a></li>
-        <li class="nav-item"><a class="nav-link" href="materials.html">Материалы</a></li>
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item"><a class="nav-link active" href="#" data-i18n="nav_home">Главная</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav_about">О себе</a></li>
+        <li class="nav-item"><a class="nav-link" href="achievements.html" data-i18n="nav_achievements">Достижения</a></li>
+        <li class="nav-item"><a class="nav-link" href="materials.html" data-i18n="nav_materials">Материалы</a></li>
+        <!-- Language switcher -->
+        <li class="nav-item ms-3">
+          <select id="lang-switcher" class="form-select form-select-sm">
+            <option value="ru">Русский</option>
+            <option value="en">English</option>
+          </select>
+        </li>
       </ul>
     </div>
   </div>
@@ -35,25 +42,25 @@
   <section class="hero text-center mb-5">
     <div class="row justify-content-center">
       <div class="col-lg-8">
-        <h1 class="display-5 mb-3" data-aos="fade-down">Английский с Марией Валерьевной</h1>
-        <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">
+        <h1 class="display-5 mb-3" data-aos="fade-down" data-i18n="hero_title">Английский с Марией Валерьевной</h1>
+        <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100" data-i18n="hero_desc">
           20 лет опыта в школе, сотни счастливых учеников и доказанные методы подготовки к ОГЭ/ЕГЭ.
         </p>
-        <a href="about.html" class="btn btn-primary btn-lg" data-aos="zoom-in" data-aos-delay="200">Узнать больше</a>
+        <a href="about.html" class="btn btn-primary btn-lg" data-aos="zoom-in" data-aos-delay="200" data-i18n="btn_more">Узнать больше</a>
       </div>
     </div>
   </section>
 
   <!-- Блок Услуг в виде карточек -->
   <section class="mb-5">
-    <h2 class="h4 mb-4 text-center" data-aos="fade-up">Что получит ваш ребёнок</h2>
+    <h2 class="h4 mb-4 text-center" data-aos="fade-up" data-i18n="services_title">Что получит ваш ребёнок</h2>
     <div class="row g-4">
       <div class="col-md-4" data-aos="flip-left" data-aos-delay="100">
         <div class="card h-100 text-center shadow-sm">
           <div class="card-body">
             <i class="bi bi-journal-text fs-1 text-primary"></i>
-            <h5 class="card-title mt-3">Подготовка к ОГЭ/ЕГЭ</h5>
-            <p class="card-text">Разбор «ловушек» в заданиях и пробные тесты в формате экзамена.</p>
+            <h5 class="card-title mt-3" data-i18n="service1_title">Подготовка к ОГЭ/ЕГЭ</h5>
+            <p class="card-text" data-i18n="service1_desc">Разбор «ловушек» в заданиях и пробные тесты в формате экзамена.</p>
           </div>
         </div>
       </div>
@@ -61,8 +68,8 @@
         <div class="card h-100 text-center shadow-sm">
           <div class="card-body">
             <i class="bi bi-people fs-1 text-primary"></i>
-            <h5 class="card-title mt-3">Английский язык это легко!</h5>
-            <p class="card-text">Учим английский через фильмы.</p>
+            <h5 class="card-title mt-3" data-i18n="service2_title">Английский язык это легко!</h5>
+            <p class="card-text" data-i18n="service2_desc">Учим английский через фильмы.</p>
           </div>
         </div>
       </div>
@@ -70,8 +77,8 @@
         <div class="card h-100 text-center shadow-sm">
           <div class="card-body">
             <i class="bi bi-pencil fs-1 text-primary"></i>
-            <h5 class="card-title mt-3">Помощь с домашкой</h5>
-            <p class="card-text">Простое объяснение сложных тем и помощь в написании сочинений.</p>
+            <h5 class="card-title mt-3" data-i18n="service3_title">Помощь с домашкой</h5>
+            <p class="card-text" data-i18n="service3_desc">Простое объяснение сложных тем и помощь в написании сочинений.</p>
           </div>
         </div>
       </div>
@@ -80,9 +87,9 @@
 
   <!-- Контактный блок -->
   <section class="text-center mt-5" data-aos="fade-up">
-    <h2 class="h4 mb-2">Есть вопросы?</h2>
-    <p>Напишите мне — и я обязательно отвечу вам!</p>
-    <a href="contacts.html" class="btn btn-outline-primary">Связаться со мной</a>
+    <h2 class="h4 mb-2" data-i18n="contact_prompt">Есть вопросы?</h2>
+    <p data-i18n="contact_sub">Напишите мне — и я обязательно отвечу вам!</p>
+    <a href="contacts.html" class="btn btn-outline-primary" data-i18n="btn_contact">Связаться со мной</a>
   </section>
 
 </main>
@@ -98,11 +105,10 @@
 <script src="js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
-  AOS.init({
-    once: true, // анимация только один раз
-    duration: 800, // продолжительность в мс
-    easing: 'ease-in-out'
-  });
+  AOS.init({ once: true, duration: 800, easing: 'ease-in-out' });
 </script>
+
+<!-- Подключаем i18n-скрипт -->
+<script src="js/language_selector.js"></script>
 </body>
 </html>
