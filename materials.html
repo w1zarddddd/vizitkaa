@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Материалы для занятий - Английский с Марией Валерьевной</title>
+  <title>Материалы для занятий</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
-  <!-- AOS CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/style.css"/>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">English with Maria</a>
+    <a class="navbar-brand" href="index.html"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -26,118 +30,42 @@
         <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">О себе</a></li>
         <li class="nav-item"><a class="nav-link" href="achievements.html">Достижения</a></li>
-        <li class="nav-item"><a class="nav-link active" href="#">Материалы</a></li>
+        <li class="nav-item"><a class="nav-link active" href="materials.html">Материалы</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 <main class="container mt-5">
-  <!-- Hero -->
-  <section class="text-center mb-5" data-aos="fade-down">
-    <h1 class="display-5">Материалы для занятий</h1>
-    <div class="divider"></div>
-    <p class="lead">
-      Здесь вы можете скачать учебники, аудиозаписи и другие пособия, а также загрузить свои файлы.
-    </p>
-  </section>
-
-  <!-- Список материалов -->
-  <section class="mb-5">
-    <h2 class="h4 text-center mb-4" data-aos="fade-up">Доступные материалы</h2>
-    <div class="row g-4">
-      <!-- PDF -->
-      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-        <div class="card h-100 text-center shadow-sm">
-          <div class="card-body">
-            <i class="bi bi-file-earmark-pdf material-icon"></i>
-            <h5 class="card-title mt-3">Учебник по грамматике</h5>
-            <p class="card-text">PDF, 2.5 МБ</p>
-            <a href="files/grammar.pdf" class="btn btn-outline-primary btn-sm">Скачать</a>
-          </div>
-        </div>
-      </div>
-      <!-- DOCX -->
-      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-        <div class="card h-100 text-center shadow-sm">
-          <div class="card-body">
-            <i class="bi bi-file-earmark-word material-icon"></i>
-            <h5 class="card-title mt-3">Шаблон сочинения</h5>
-            <p class="card-text">DOCX, 150 КБ</p>
-            <a href="files/essay_template.docx" class="btn btn-outline-primary btn-sm">Скачать</a>
-          </div>
-        </div>
-      </div>
-      <!-- Audio -->
-      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
-        <div class="card h-100 text-center shadow-sm">
-          <div class="card-body">
-            <i class="bi bi-file-earmark-audio material-icon"></i>
-            <h5 class="card-title mt-3">Аудиозапись диалога</h5>
-            <p class="card-text">MP3, 3.2 МБ</p>
-            <a href="files/dialogue.mp3" class="btn btn-outline-primary btn-sm">Скачать</a>
-          </div>
-        </div>
-      </div>
+  <h1 class="mb-4">Отправить домашнее задание</h1>
+  <form id="homework-form" class="shadow-sm p-4 rounded" data-aos="fade-up">
+    <div class="mb-3">
+      <label for="user_email" class="form-label">Ваш email</label>
+      <input type="email" class="form-control" id="user_email" name="user_email" required />
     </div>
-  </section>
 
-  <!-- Форма загрузки материалов -->
-  <section class="mb-5" data-aos="fade-up" data-aos-delay="100">
-    <h2 class="h4 text-center mb-4">Загрузить материал</h2>
-    <div class="row justify-content-center">
-      <div class="col-lg-6">
-        <form 
-          action="/upload"                <!-- ваш серверный эндпоинт -->
-          method="POST" 
-          enctype="multipart/form-data"
-          class="shadow-sm p-4 rounded"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <div class="mb-3">
-            <label for="materialTitle" class="form-label">Название файла</label>
-            <input type="text" name="title" id="materialTitle" class="form-control" placeholder="Например, Упражнения_1" required>
-          </div>
-          <div class="mb-3">
-            <label for="materialFiles" class="form-label">Выберите файлы</label>
-            <input 
-              class="form-control" 
-              type="file" 
-              id="materialFiles" 
-              name="files[]" 
-              multiple 
-              accept=".pdf,.doc,.docx,.mp3,.wav"
-              required
-            >
-            <div class="form-text">Поддерживаемые форматы: PDF, DOC/DOCX, MP3, WAV.</div>
-          </div>
-          <button type="submit" class="btn btn-primary w-100" data-aos="zoom-in" data-aos-delay="300">
-            Загрузить
-          </button>
-        </form>
-      </div>
+    <div class="mb-3">
+      <label for="message" class="form-label">Комментарий</label>
+      <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
     </div>
-  </section>
+
+    <div class="mb-3">
+      <label for="file" class="form-label">Файл домашнего задания</label>
+      <input type="file" class="form-control" id="file" name="file" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Отправить</button>
+  </form>
+
+  <div id="status-message" class="mt-3"></div>
 </main>
 
-<footer class="mt-5 py-4 bg-light text-center">
-  <div class="container">
-    <p class="mb-1">&copy; 2025 Английский с Марией Валерьевной</p>
-    <small>Телефон: +7 (914) 827-95-53 &middot; Email: grigmaryiavaleri@mail.ru</small>
-  </div>
-</footer>
-
-<!-- Bootstrap JS -->
+<!-- JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- AOS JS -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
-  AOS.init({
-    once: true,
-    duration: 800,
-    easing: 'ease-in-out'
-  });
+  AOS.init();
 </script>
+<script src="js/email-form.js"></script>
 </body>
 </html>
