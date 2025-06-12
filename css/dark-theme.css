@@ -1,0 +1,110 @@
+body.dark-theme {
+    --primary-color: #4dabf7; /* Lighter blue for dark background */
+    --secondary-color: #adb5bd; /* Lighter grey */
+    --background-color: #121212; /* Dark background */
+    --surface-color: #1e1e1e; /* Slightly lighter dark for surfaces */
+    --text-color: #e9ecef; /* Light grey text */
+    --heading-color: #a5d8ff; /* Lighter blue for headings */
+    --nav-link-bg-active: #0056b3; /* Darker blue for active nav link */
+    --nav-link-color-active: #ffffff; /* White text for active nav link */
+    --nav-link-bg-hover: #004085; /* Even darker blue for nav link hover */
+    --footer-bg: #1e1e1e; /* Dark footer background */
+
+    /* Ensure variables are applied */
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+body.dark-theme img {
+    opacity: 0.85;
+}
+
+body.dark-theme .timeline::before {
+    background: var(--primary-color);
+}
+
+body.dark-theme .timeline-item::before {
+    background: var(--surface-color); /* Use surface color for the dot's inner part */
+    border-color: var(--primary-color);
+}
+
+body.dark-theme .profile-img {
+    border-color: var(--primary-color);
+}
+
+body.dark-theme .divider {
+    background: var(--primary-color);
+}
+
+/* Specific adjustments for Bootstrap components if needed */
+body.dark-theme .bg-light {
+    background-color: var(--surface-color) !important; /* Override Bootstrap's light background */
+}
+
+body.dark-theme .text-dark {
+    color: var(--text-color) !important; /* Override Bootstrap's dark text */
+}
+
+body.dark-theme .navbar-light .navbar-brand,
+body.dark-theme .navbar-light .nav-link {
+    color: var(--text-color);
+}
+
+body.dark-theme .navbar-light .nav-link.active {
+    background: var(--nav-link-bg-active) !important;
+    color: var(--nav-link-color-active) !important;
+}
+
+body.dark-theme .navbar-light .nav-link:hover:not(.active) {
+    background: var(--nav-link-bg-hover) !important;
+    color: var(--nav-link-color-active) !important; /* Ensure text is readable on hover */
+}
+
+body.dark-theme .btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+body.dark-theme .btn-outline-primary:hover {
+    color: var(--background-color); /* Text color on hover */
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+body.dark-theme .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--background-color); /* Ensure contrast for button text */
+}
+
+body.dark-theme .btn-primary:hover {
+    opacity: 0.9;
+}
+
+
+body.dark-theme .card {
+    background-color: var(--surface-color);
+    border-color: var(--primary-color); /* Optional: themed border for cards */
+}
+
+body.dark-theme .list-group-item {
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    border-color: rgba(255, 255, 255, 0.125); /* Lighter border for list items */
+}
+
+body.dark-theme .form-control {
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    border-color: var(--secondary-color);
+}
+
+body.dark-theme .form-control::placeholder {
+    color: var(--secondary-color);
+}
+
+body.dark-theme .form-select {
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    border-color: var(--secondary-color);
+}
